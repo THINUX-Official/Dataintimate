@@ -1,7 +1,10 @@
-import Image from "next/image";
 import {SideBar} from "@/view/common/SideBar/SideBar";
 import 'tailwindcss/tailwind.css'
+import 'bootstrap/dist/css/bootstrap.css'
+
+
 import {NavBar} from "@/view/common/NavBar/NavBar";
+import {StatusBar} from "@/view/common/StatusBar/StatusBar";
 
 
 export default function Home() {
@@ -9,7 +12,10 @@ export default function Home() {
         <>
             <div>
                 <NavBar/>
-                <SideBar/>
+                <div className="flex">
+                    <SideBar/>
+                    <StatusBar/>
+                </div>
             </div>
         </>
     );
