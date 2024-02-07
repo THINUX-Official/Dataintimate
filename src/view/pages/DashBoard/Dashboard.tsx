@@ -1,13 +1,16 @@
-import {FaDownload} from "react-icons/fa";
-import {FaCalendar} from "react-icons/fa";
-import { FaDollarSign } from "react-icons/fa";
-import { FaClipboardList } from "react-icons/fa";
-import { HiChatAlt2 } from "react-icons/hi";
-
-
+import {FaCalendar, FaClipboardList, FaDollarSign, FaDownload} from "react-icons/fa";
+import dynamic from "next/dynamic";
+import {IoChatbubblesSharp} from "react-icons/io5";
+import {ProgressBar} from "@/view/common/ProgressBar/ProgressBar";
 
 
 export const Dashboard = () => {
+
+    // @ts-ignore
+    const DoughnutChart = dynamic(() => import('@/view/common/DoughnutChart/DoughnutChart'), {
+        ssr: false, // Disable server-side rendering
+    });
+
     return (
         <>
             <div className="flex justify-between">
@@ -65,9 +68,17 @@ export const Dashboard = () => {
                     </div>
 
                     <div>
-                        <HiChatAlt2 className="text-gray-200"/>
+                        <IoChatbubblesSharp className="text-gray-200"/>
                     </div>
                 </div>
+            </div>
+
+            <div>
+                {/*<DoughnutChart/>*/}
+            </div>
+
+            <div>
+                <ProgressBar/>
             </div>
         </>
     );

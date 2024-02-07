@@ -7,7 +7,7 @@ import {FaUserAlt} from "react-icons/fa";
 export function StatusBar() {
     return (
         <>
-            <div className="mt-11 w-full h-14 flex justify-content-between items-center px-3">
+            <div className="w-full h-14 flex justify-content-between items-center px-3">
                 <div className="flex items-center text-white text-[10px] justify-self-start">
                     <input className="rounded-start-1 h-7 w-72 pl-2 bg-gray-100 text-black" type="text" placeholder="Search for..."
                            aria-label="Search" aria-describedby="basic-addon"/>

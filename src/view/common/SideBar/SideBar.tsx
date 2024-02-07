@@ -12,7 +12,7 @@ export const SideBar = () => {
 
     return (
         <>
-            <div className="mt-11 bg-gradient-to-b from-[#4e73df] to-blue-600 w-56 h-screen px-3 text-gray-300">
+            <div className="bg-gradient-to-b from-[#4e73df] to-blue-600 w-56 h-screen px-3 text-gray-300">
 
                 <div className="flex justify-center items-center border-b border-gray-300">
                     <div className="text-[25px] py-4 -rotate-45 ">
