@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import {NavBar} from "@/view/common/NavBar/NavBar";
 import {StatusBar} from "@/view/common/StatusBar/StatusBar";
+import {Content} from "@/view/common/Content/Content";
 
 
 export default function Home() {
@@ -14,7 +15,10 @@ export default function Home() {
                 <NavBar/>
                 <div className="flex">
                     <SideBar/>
-                    <StatusBar/>
+                    <div className="w-full block">
+                        <StatusBar/>
+                        <Content/>
+                    </div>
                 </div>
             </div>
         </>
