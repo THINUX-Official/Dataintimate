@@ -2,6 +2,7 @@ import {FaCalendar, FaClipboardList, FaDollarSign, FaDownload} from "react-icons
 import dynamic from "next/dynamic";
 import {IoChatbubblesSharp} from "react-icons/io5";
 import {ProgressBar} from "@/view/common/ProgressBar/ProgressBar";
+import {ColorCards} from "@/view/common/ColorCards/ColorCards";
 
 
 export const Dashboard = () => {
@@ -79,6 +80,7 @@ export const Dashboard = () => {
 
             <div>
                 <ProgressBar/>
+                <ColorCards/>
             </div>
         </>
     );
