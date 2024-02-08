@@ -35,7 +35,7 @@ export const SideBar = () => {
     return (
         <>
             <div
-                className="bg-gradient-to-b from-[#4e73df] to-blue-600 w-56 min-h-screen px-3 text-white text-opacity-50">
+                className="bg-gradient-to-b from-[#4e73df] to-blue-600 w-56 min-h-screen px-3 text-white text-opacity-50 select-none ">
 
                 <div className="flex justify-center items-center border-b border-white border-opacity-25 text-white">
                     <div className="text-[25px] -rotate-45 mt-[-10px]">
@@ -90,7 +90,7 @@ export const SideBar = () => {
                         </div>
                     </button>
 
-                    {isCollapseUtilities && <div className="collapsed-content">
+                    {isCollapseUtilities && <div className="collapsed-content" style={{marginBottom: '10px'}}>
                         <h6 className="para-style">CUSTOM UTILITIES:</h6>
                         <div>
                             <button className="button-style">Colors</button>

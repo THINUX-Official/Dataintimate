@@ -5,9 +5,10 @@
 
 .collapsed-content {
     background-color: white;
-    /*opacity: 50%;*/
-    padding: 10px;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
+    animation: dropdown 0.3s ease-in-out;
+    /*animation-delay: 1000ms;*/
 }
 
 .para-style {
@@ -21,7 +22,7 @@
     color: black;
     background-color: white;
     padding: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
     width: 100%;
     text-align: left;
     border-radius: 5px;
@@ -29,4 +30,15 @@
 
 .button-style:hover {
     background-color: lightgray;
+}
+
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

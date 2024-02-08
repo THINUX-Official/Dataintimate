@@ -4,6 +4,8 @@ import {ColorCards} from "@/view/common/ColorCards/ColorCards";
 import {AreaChart} from "@/view/common/AreaChart/AreaChart";
 import {DoughnutChart} from "@/view/common/DoughnutChart/DoughnutChart";
 import {StatusCards} from "@/view/common/StatusCards/StatusCards";
+import {Illustration} from "@/view/common/Illustration/Illustration";
+import {DevApproach} from "@/view/common/DevApproach/DevApproach";
 
 export const Dashboard = () => {
     return (
@@ -32,10 +34,21 @@ export const Dashboard = () => {
 
             </div>
 
-            <div>
-            <ProgressBar/>
-                <ColorCards/>
+
+            <div className="flex justify-between">
+                <div className="w-[50%] mr-3">
+                    <ProgressBar/>
+                    <ColorCards/>
+                </div>
+
+                <div className="w-[50%]">
+                    <Illustration/>
+                    <div className="mt-3">
+                        <DevApproach/>
+                    </div>
+                </div>
             </div>
+
         </>
     );
 };
