@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.collapsed-content {
+    background-color: white;
+    /*opacity: 50%;*/
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.para-style {
+    color: gray;
+    font-size: 8px;
+    padding-left: 5px;
+}
+
+.button-style {
+    font-size: 9px;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.button-style:hover {
+    background-color: lightgray;
+}

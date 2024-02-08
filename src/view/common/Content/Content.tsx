@@ -1,3 +1,5 @@
+'use client'
+
 import {Dashboard} from "@/view/pages/DashBoard/Dashboard";
 
 export const Content = () => {

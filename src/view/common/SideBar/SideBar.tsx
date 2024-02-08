@@ -1,25 +1,48 @@
+'use client'
+
 import 'tailwindcss/tailwind.css'
 import {FaFaceGrinWink} from "react-icons/fa6";
 import {AiFillDashboard} from "react-icons/ai";
-import {IoMdSettings} from "react-icons/io";
+import {IoIosArrowDropleftCircle, IoMdSettings} from "react-icons/io";
 import {TiSpanner} from "react-icons/ti";
-import {FaFolder} from "react-icons/fa";
+import {FaFolder, FaTable} from "react-icons/fa";
 import {IoBarChartSharp} from "react-icons/io5";
-import {FaTable} from "react-icons/fa";
+import {MdKeyboardArrowRight} from "react-icons/md";
 
+
+import {useState} from "react";
 
 export const SideBar = () => {
 
+    const [isCollapsedComponents, setIsCollapsedComponents] = useState(false);
+
+    const toggleCollapseComponents = () => {
+        setIsCollapsedComponents(!isCollapsedComponents);
+    };
+
+    const [isCollapseUtilities, setIsCollapseUtilities] = useState(false);
+
+    const toggleCollapseUtilities = () => {
+        setIsCollapseUtilities(!isCollapseUtilities);
+    }
+
+    const [isCollapsePages, setIsCollapsePages] = useState(false);
+
+    const toggleCollapsePages = () => {
+        setIsCollapsePages(!isCollapsePages);
+    }
+
     return (
         <>
-            <div className="bg-gradient-to-b from-[#4e73df] to-blue-600 w-56 min-h-screen px-3 text-white text-opacity-50">
+            <div
+                className="bg-gradient-to-b from-[#4e73df] to-blue-600 w-56 min-h-screen px-3 text-white text-opacity-50">
 
                 <div className="flex justify-center items-center border-b border-white border-opacity-25 text-white">
                     <div className="text-[25px] -rotate-45 mt-[-10px]">
                         <FaFaceGrinWink/>
                     </div>
                     <h1 className="font-bold text-[13px] text-center py-3 pl-3">SB ADMIN</h1>
-                    <small className="pb-2 font-bold text-[9px]  pl-1.5">2</small>
+                    <small className="pb-3 font-bold text-[9px]  pl-1.5">2</small>
                 </div>
 
                 <div className="flex pt-3 pb-2 border-b border-white border-opacity-25 hover:text-white">
@@ -33,30 +56,83 @@ export const SideBar = () => {
                 <div className="border-b border-white border-opacity-25 pt-3">
                     <h1 className="text-[9px] font-medium">INTERFACE</h1>
 
-                    <div className="flex pt-2 hover:text-white">
-                        <div>
-                            <IoMdSettings/>
+                    {/*onClick={toggleCollapse}*/}
+                    <button type="button" onClick={toggleCollapseComponents}>
+                        <div className="flex pt-2 hover:text-white">
+                            <div>
+                                <IoMdSettings/>
+                            </div>
+                            <h1 className="text-[11px] font-medium px-1.5 pt-0.5">Components</h1>
+                            <div className="ml-14">
+                                <MdKeyboardArrowRight/>
+                            </div>
                         </div>
-                        <h1 className="text-[11px] font-medium px-1.5 pt-0.5">Components</h1>
-                    </div>
+                    </button>
 
-                    <div className="flex pt-3 pb-2 hover:text-white">
+                    {isCollapsedComponents && <div className="collapsed-content">
+                        <h6 className="para-style">CUSTOM COMPONENTS:</h6>
                         <div>
-                            <TiSpanner/>
+                            <button className="button-style">Buttons</button>
+                            <br/>
+                            <button className="button-style">Cards</button>
                         </div>
-                        <h1 className="text-[11px] font-medium px-1.5 pt-0.5">Utilities</h1>
-                    </div>
+                    </div>}
+
+                    <button type="button" onClick={toggleCollapseUtilities}>
+                        <div className="flex pt-3 pb-2 hover:text-white">
+                            <div>
+                                <TiSpanner/>
+                            </div>
+                            <h1 className="text-[11px] font-medium px-1.5 pt-0.5">Utilities</h1>
+                            <div className="ml-[83px]">
+                                <MdKeyboardArrowRight/>
+                            </div>
+                        </div>
+                    </button>
+
+                    {isCollapseUtilities && <div className="collapsed-content">
+                        <h6 className="para-style">CUSTOM UTILITIES:</h6>
+                        <div>
+                            <button className="button-style">Colors</button>
+                            <br/>
+                            <button className="button-style">Borders</button>
+                            <br/>
+                            <button className="button-style">Animations</button>
+                            <br/>
+                            <button className="button-style">Other</button>
+                        </div>
+                    </div>}
                 </div>
 
                 <div className="border-b border-white border-opacity-25 pt-3">
                     <h1 className="text-[9px] font-medium">ADDONS</h1>
 
-                    <div className="flex pt-2 hover:text-white">
-                        <div>
-                            <FaFolder/>
+                    <button type="button" onClick={toggleCollapsePages}>
+                        <div className="flex pt-2 hover:text-white">
+                            <div>
+                                <FaFolder/>
+                            </div>
+                            <h1 className="text-[11px] font-medium px-1.5 pt-0.5">Pages</h1>
+                            <div className="ml-[90px]">
+                                <MdKeyboardArrowRight/>
+                            </div>
                         </div>
-                        <h1 className="text-[11px] font-medium px-1.5 pt-0.5">Pages</h1>
-                    </div>
+                    </button>
+
+                    {isCollapsePages && <div className="collapsed-content">
+                        <div>
+                            <h6 className="para-style">LOGIN SCREENS:</h6>
+                            <button className="button-style">Login</button>
+                            <br/>
+                            <button className="button-style">Register</button>
+                            <br/>
+                            <button className="button-style">Forgot Password</button>
+                            <h6 className="para-style" style={{paddingTop: '8px'}}>OTHER PAGES:</h6>
+                            <button className="button-style">404 Page</button>
+                            <br/>
+                            <button className="button-style">Blank Page</button>
+                        </div>
+                    </div>}
 
                     <div className="flex pt-4 hover:text-white">
                         <div>
@@ -74,6 +150,12 @@ export const SideBar = () => {
                     </div>
 
 
+                </div>
+
+                <div>
+                    <button className="flex mx-auto my-3 text-[35px] text-opacity-50 hover:text-opacity-100">
+                        <IoIosArrowDropleftCircle/>
+                    </button>
                 </div>
             </div>
         </>

@@ -1,5 +1,4 @@
-import {FaCalendar, FaClipboardList, FaDollarSign, FaDownload} from "react-icons/fa";
-import {IoChatbubblesSharp} from "react-icons/io5";
+import {FaDownload} from "react-icons/fa";
 import {ProgressBar} from "@/view/common/ProgressBar/ProgressBar";
 import {ColorCards} from "@/view/common/ColorCards/ColorCards";
 import {AreaChart} from "@/view/common/AreaChart/AreaChart";
@@ -23,13 +22,18 @@ export const Dashboard = () => {
                 <StatusCards/>
             </div>
 
-            <div>
-                <AreaChart/>
-                <DoughnutChart/>
+            <div className="flex">
+                <div className="w-[60%] mr-3">
+                    <AreaChart/>
+                </div>
+                <div className="w-[40%]">
+                    <DoughnutChart/>
+                </div>
+
             </div>
 
             <div>
-                <ProgressBar/>
+            <ProgressBar/>
                 <ColorCards/>
             </div>
         </>
