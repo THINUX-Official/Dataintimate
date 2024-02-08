@@ -25,10 +25,10 @@ export const Dashboard = () => {
             </div>
 
             <div className="flex flex-wrap justify-content-between">
-                <div className="lg:w-[60%] w-[100%] lg:mr-3">
+                <div className="lg:w-[70%] w-[100%] lg:mr-3">
                     <AreaChart/>
                 </div>
-                <div className="lg:w-[39%] w-[100%]">
+                <div className="lg:w-[29%] w-[100%]">
                     <DoughnutChart/>
                 </div>
 
