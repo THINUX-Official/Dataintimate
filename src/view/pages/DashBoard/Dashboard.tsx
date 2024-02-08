@@ -24,24 +24,24 @@ export const Dashboard = () => {
                 <StatusCards/>
             </div>
 
-            <div className="flex">
-                <div className="w-[60%] mr-3">
+            <div className="flex flex-wrap justify-content-between">
+                <div className="lg:w-[60%] w-[100%] lg:mr-3">
                     <AreaChart/>
                 </div>
-                <div className="w-[40%]">
+                <div className="lg:w-[39%] w-[100%]">
                     <DoughnutChart/>
                 </div>
 
             </div>
 
 
-            <div className="flex justify-between">
-                <div className="w-[50%] mr-3">
+            <div className="flex flex-wrap justify-content-between">
+                <div className="lg:w-[50%] lg:mr-3">
                     <ProgressBar/>
                     <ColorCards/>
                 </div>
 
-                <div className="w-[50%]">
+                <div className="lg:w-[49%] w-[100%]">
                     <Illustration/>
                     <div className="mt-3">
                         <DevApproach/>

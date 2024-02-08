@@ -39,7 +39,7 @@ export const StatusCards = () => {
                         <div className="flex">
                             <h6 className="pr-3 text-gray-500">50%</h6>
 
-                            <div className="progress w-60 h-[2px]">
+                            <div className="progress w-auto h-[2px]">
                                 <div className="progress-bar bg-info w-[50%] h-2" role="progressbar"
                                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                                 </div>
