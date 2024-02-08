@@ -70,7 +70,7 @@ export const AreaChart = () => {
                 <h5 className="card-header text-[14px] text-primary">Earnings Overview</h5>
                 <div className="card-body">
                     <div>
-                        <canvas ref={chartRef}></canvas>
+                        <canvas ref={chartRef} height={'118px'}></canvas>
                     </div>
                 </div>
             </div>

@@ -60,7 +60,7 @@ export const DoughnutChart = () => {
                 <h5 className="card-header text-[14px] text-primary">Revenue Sources</h5>
                 <div className="card-body">
                     <div>
-                        <canvas ref={chartRef} width="300" height="300"></canvas>
+                        <canvas ref={chartRef} width={'300px'} height={'300px'}></canvas>
                     </div>
                 </div>
             </div>
