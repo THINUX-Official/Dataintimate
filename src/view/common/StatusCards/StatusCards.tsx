@@ -39,10 +39,14 @@ export const StatusCards = () => {
                         <div className="flex">
                             <h6 className="pr-3 text-gray-500">50%</h6>
 
-                            <div className="progress w-auto h-[2px]">
+                            {/*<div className="progress w-auto h-[2px]">
                                 <div className="progress-bar bg-info w-[50%] h-2" role="progressbar"
                                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                                 </div>
+                            </div>*/}
+
+                            <div className="w-full bg-gray-200 rounded-full h-2">
+                                <div className="bg-cyan-500 h-2 rounded-full w-[50%]"></div>
                             </div>
                         </div>
                     </div>

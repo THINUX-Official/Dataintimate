@@ -14,6 +14,8 @@ import {useState} from "react";
 
 export const SideBar = () => {
 
+    const [selectedItem, selectItem] = useState('dashboard');
+
     const [isCollapsedComponents, setIsCollapsedComponents] = useState(false);
 
     const toggleCollapseComponents = () => {
@@ -38,7 +40,7 @@ export const SideBar = () => {
                 className="bg-gradient-to-b from-[#4e73df] to-blue-600 lg:w-48 w-56 min-h-screen px-3 text-white text-opacity-50 select-none ">
 
                 <div className="flex justify-center items-center border-b border-white border-opacity-25 text-white">
-                    <div className="text-[25px] -rotate-45 mt-[-10px]">
+                    <div className="text-[25px] -rotate-[25deg] mt-[-10px]">
                         <FaFaceGrinWink/>
                     </div>
                     <h1 className="font-bold text-[13px] text-center py-3 pl-3">SB ADMIN</h1>
@@ -51,7 +53,6 @@ export const SideBar = () => {
                     </div>
                     <h1 className="text-[11px] font-bold pt-[3px] px-1.5">Dashboard</h1>
                 </div>
-
 
                 <div className="border-b border-white border-opacity-25 pt-3">
                     <h1 className="text-[9px] font-medium">INTERFACE</h1>
