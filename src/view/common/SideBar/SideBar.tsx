@@ -35,7 +35,7 @@ export const SideBar = () => {
     return (
         <>
             <div
-                className="bg-gradient-to-b from-[#4e73df] to-blue-600 w-56 min-h-screen px-3 text-white text-opacity-50 select-none ">
+                className="bg-gradient-to-b from-[#4e73df] to-blue-600 lg:w-48 w-56 min-h-screen px-3 text-white text-opacity-50 select-none ">
 
                 <div className="flex justify-center items-center border-b border-white border-opacity-25 text-white">
                     <div className="text-[25px] -rotate-45 mt-[-10px]">
@@ -113,7 +113,7 @@ export const SideBar = () => {
                                 <FaFolder/>
                             </div>
                             <h1 className="text-[11px] font-medium px-1.5 pt-0.5">Pages</h1>
-                            <div className="ml-[90px]">
+                            <div className="lg:ml-[70px] ml-[90px]">
                                 <MdKeyboardArrowRight/>
                             </div>
                         </div>
